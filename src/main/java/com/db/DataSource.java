@@ -1,10 +1,12 @@
 package com.db;
 
-import com.zaxxer.hikari.*;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
+
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 
 public class DataSource {
 
@@ -23,8 +25,11 @@ public class DataSource {
         catch(IOException exception){
             throw new RuntimeException("Failed to load properties", exception);
         }
-    }
+        ds = new HikariDataSource(config);
 
+    }
+    
+    
     private DataSource() {}
 
     public static Connection getConnection() throws SQLException {
