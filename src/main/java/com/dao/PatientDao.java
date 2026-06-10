@@ -32,7 +32,8 @@ public class PatientDao implements Dao<Patient> {
     }
 
     //This is risky since it just reads the list of input params and doesnt handle missing params well.
-    //TODO: Fix this ^
+    //TODO: Fix this(?)
+    //This is probably bad and not industry standard AT ALLLLL but since the only way of calling it will be through a structured system, the non-filled parts will be auto-nulled!
 
     @Override
     public void update(Patient p, String[] params){
