@@ -16,10 +16,10 @@ public interface Dao<T> {
     void add(T t);
 
     //U in CRUD
-    void update(T t, String[] params);
+    void update(T t, int id);
 
     //D in CRUD
-    void delete(T t);
+    void delete(int id);
 
     //Yay what a CRUDdy file :D 
 }

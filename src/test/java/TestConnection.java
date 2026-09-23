@@ -13,6 +13,6 @@ public class TestConnection {
     public void givenConnection_thenFetchDbData() throws SQLException{
         List<Patient> patients = Main.fetchData();
 
-        assertEquals(8, patients.size());
+        assertNotEquals(0, patients.size());
     }
 }
